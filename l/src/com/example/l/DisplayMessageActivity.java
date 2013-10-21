@@ -47,7 +47,7 @@ public class DisplayMessageActivity extends Activity {
         final DefaultHttpClient client = new DefaultHttpClient(); 
         try {
             
-            String getURL = "http://ec2-75-101-223-173.compute-1.amazonaws.com/piano/2";
+            String getURL = "http://ec2-75-101-333-173.compute-1.amazonaws.com/piano/2";
             HttpGet get = new HttpGet(getURL);
             HttpResponse responseGet = client.execute(get); 
             final HttpEntity resEntityGet = responseGet.getEntity(); 
@@ -121,7 +121,7 @@ public class DisplayMessageActivity extends Activity {
 	    	                	 //response = EntityUtils.toString(resEntityGet);
 	    	                	///////////////////// DOWNLOAD FILE////////////////////////////
 	    	                	
-	    	                    URL url = new URL("http://ec2-75-101-223-173.compute-1.amazonaws.com/piano/1/"+nowfile); //you can write here any link
+	    	                    URL url = new URL("http://ec2-75-101-233-173.compute-1.amazonaws.com/piano/1/"+nowfile); //you can write here any link
 	    	                    File file = new File(dir, nowfile);
 	    	                    URLConnection ucon = url.openConnection();
 	    	                    InputStream is = ucon.getInputStream();
