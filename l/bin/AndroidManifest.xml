@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.l"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> 
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.l.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.l.DisplayMessageActivity"
+            android:label="@string/title_activity_display_message"
+            android:parentActivityName="com.example.l.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.l.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.l.DisplayMessageActivity2"
+            android:label="@string/title_activity_display_message_activity2"
+            android:parentActivityName="com.example.l.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.l.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.l.Play"
+            android:label="@string/title_activity_play"
+            android:parentActivityName="com.example.l.DisplayMessageActivity2" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.l.DisplayMessageActivity2" />
+        </activity>
+        <activity
+            android:name="com.example.l.Orbit"
+            android:label="@string/title_activity_orbit"  
+            android:parentActivityName="com.example.l.Play">
+        </activity>
+    </application>
+
+</manifest>
